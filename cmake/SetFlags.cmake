@@ -24,6 +24,7 @@ function(cmuSetCompileFlags)
 		set(F_WARN "${F_WARN} -Wno-c++98-compat-pedantic")
 		set(F_WARN "${F_WARN} -Wno-global-constructors")
 		set(F_WARN "${F_WARN} -Wno-undefined-reinterpret-cast")
+		set(F_WARN "${F_WARN} -Wno-disabled-macro-expansion")
 
 		set(F_DBG "${F_WARN} -std=c++1y -g -O0 -fno-omit-frame-pointer")
 		set(F_DBG "${F_DBG} -fsanitize=address -fsanitize=undefined")
