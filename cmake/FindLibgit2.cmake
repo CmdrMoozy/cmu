@@ -17,12 +17,14 @@ find_path(LIBGIT2_INCLUDE_DIR
         git2.h
     HINTS
         ${PKG_GIT2_INCLUDE_DIRS}
+	${LIBGIT2_INCLUDEDIR_HINT}
 )
 find_library(LIBGIT2_LIBRARY
     NAMES
         git2
     HINTS
         ${PKG_GIT2_LIBRARY_DIRS}
+	${LIBGIT2_LIBRARYDIR_HINT}
 )
 
 include(FindPackageHandleStandardArgs)

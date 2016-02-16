@@ -4,8 +4,14 @@
 # YAJL_LIBRARIES - The libraries which should be linked for yajl.
 # YAJL_INCLUDE_DIRS - The include directories for yajl
 
-find_path(YAJL_INCLUDE_DIR NAMES yajl/yajl_common.h)
-find_library(YAJL_LIBRARY NAMES yajl)
+find_path(YAJL_INCLUDE_DIR
+	NAMES yajl/yajl_common.h
+	HINTS ${YAJL_INCLUDEDIR_HINT}
+	)
+find_library(YAJL_LIBRARY
+	NAMES yajl
+	HINTS ${YAJL_LIBRARYDIR_HINT}
+	)
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(Yajl
