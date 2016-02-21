@@ -6,11 +6,14 @@
 
 find_path(YAJL_INCLUDE_DIR
 	NAMES yajl/yajl_common.h
-	HINTS ${YAJL_INCLUDEDIR_HINT}
+	HINTS
+		${YAJL_INCLUDEDIR_HINT}
 	)
 find_library(YAJL_LIBRARY
-	NAMES yajl
-	HINTS ${YAJL_LIBRARYDIR_HINT}
+	NAMES yajl yajl_s
+	HINTS
+		${YAJL_LIBRARYDIR_HINT}
+		${YAJL_LIBRARYDIR_HINT}/Release
 	)
 
 include(FindPackageHandleStandardArgs)
