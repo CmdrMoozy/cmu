@@ -58,6 +58,8 @@ function(cmuSetCompileFlags)
 		set(F_DBG "/W4 /WX /FIcmu/MSVCWarnings.hpp")
 
 		set(F_REL "/W4 /WX /FIcmu/MSVCWarnings.hpp")
+
+		add_definitions(-DNOMINMAX)
 	else()
 		set(F_DBG "")
 		set(F_REL "")
