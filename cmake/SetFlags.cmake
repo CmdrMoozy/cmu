@@ -39,6 +39,12 @@ function(cmuSetCompileFlags)
 		set(F_WARN "${F_WARN} -Wno-undefined-reinterpret-cast")
 		set(F_WARN "${F_WARN} -Wno-disabled-macro-expansion")
 
+		# Needed for Google's protobuf library.
+		set(F_WARN "${F_WARN} -Wno-reserved-id-macro")
+		set(F_WARN "${F_WARN} -Wno-missing-variable-declarations")
+		set(F_WARN "${F_WARN} -Wno-shorten-64-to-32")
+		set(F_WARN "${F_WARN} -Wno-unused-macros")
+
 		set(F_DBG "${F_WARN} -std=c++1y -g -O0 -fno-omit-frame-pointer")
 		set(F_DBG "${F_DBG} -fstack-protector-strong")
 
